@@ -17,7 +17,7 @@ exports.sendEmailAt11 = onSchedule("every day 11:00", async (event) => {
     });
 });
 
-exports.sendEmailAt610PM = onSchedule("32 18 * * *", async (event) => {
+exports.sendEmailAt610PM = onSchedule("every day 13:17", async (event) => {
   fetch("https://nexus-v1-88001ab41484.herokuapp.com/api/sendScheduledEmail/sendEmailfortesting")
     .then((res) => res.json())
     .then((res) => {
