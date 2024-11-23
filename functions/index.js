@@ -17,7 +17,7 @@ exports.sendEmailAt11 = onSchedule("every day 11:00", async (event) => {
     });
 });
 
-exports.sendEmailGSTR1 = onSchedule("every day 13:30", async (event) => {
+exports.sendEmailGSTR1 = onSchedule("every day 14:05", async (event) => {
   fetch("https://nexus-v1-88001ab41484.herokuapp.com/api/sendScheduledEmail/sendEmailfortesting_gstr01")
     .then((res) => res.json())
     .then((res) => {
@@ -30,7 +30,7 @@ exports.sendEmailGSTR1 = onSchedule("every day 13:30", async (event) => {
     });
 });
 
-exports.sendEmailGSTR3B = onSchedule("every day 13:30", async (event) => {
+exports.sendEmailGSTR3B = onSchedule("every day 14:05", async (event) => {
   fetch("https://nexus-v1-88001ab41484.herokuapp.com/api/sendScheduledEmail/sendEmailfortesting_gstr3b")
     .then((res) => res.json())
     .then((res) => {
