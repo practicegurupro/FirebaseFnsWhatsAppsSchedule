@@ -17,8 +17,21 @@ exports.sendEmailAt11 = onSchedule("every day 11:00", async (event) => {
     });
 });
 
-exports.sendEmailAt610PM = onSchedule("every day 13:40", async (event) => {
-  fetch("https://nexus-v1-88001ab41484.herokuapp.com/api/sendScheduledEmail/sendEmailfortesting")
+exports.sendEmailGSTR1 = onSchedule("every day 13:30", async (event) => {
+  fetch("https://nexus-v1-88001ab41484.herokuapp.com/api/sendScheduledEmail/sendEmailfortesting_gstr01")
+    .then((res) => res.json())
+    .then((res) => {
+      console.log("Email sent successfully at 6:10 PM:", res);
+      logger.log("Email sent successfully at 6:10 PM");
+    })
+    .catch((err) => {
+      console.error("Error in sending email at 6:10 PM:", err);
+      logger.log("Error in sending email at 6:10 PM", err);
+    });
+});
+
+exports.sendEmailGSTR3B = onSchedule("every day 13:30", async (event) => {
+  fetch("https://nexus-v1-88001ab41484.herokuapp.com/api/sendScheduledEmail/sendEmailfortesting_gstr3b")
     .then((res) => res.json())
     .then((res) => {
       console.log("Email sent successfully at 6:10 PM:", res);
